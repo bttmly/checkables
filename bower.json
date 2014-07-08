@@ -1,0 +1,24 @@
+{
+  "name": "checkables",
+  "version": "0.0.0",
+  "authors": [
+    "Nick Bottomley <nhbottomley@gmail.com>"
+  ],
+  "description": "pure CSS radio and checkbox inputs",
+  "main": "checkables.sass",
+  "keywords": [
+    "css",
+    "input",
+    "checkbox",
+    "radio"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ]
+}
