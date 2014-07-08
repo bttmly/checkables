@@ -1,0 +1,175 @@
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="./checkables.css">
+  <style>
+  *, *:before, *:after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 100%;
+  }
+
+  body {
+    margin: 1rem;
+    color: #333;
+    font-family: "Avenir Next", "Helvetica Neue", Helvetica;
+  }
+
+  code {
+    font-family: "Consolas", "Monaco", monospace;
+  }
+
+  .wrapper {
+    max-width: 100%;
+    width: 720px;
+    margin: 0 auto;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .subtitle {
+    font-size: 50%;
+    font-weight: normal;
+    display: block;
+  }
+
+  .rem-control label {
+    display: block;
+    width: 50%;
+    margin: .5rem auto;
+  }
+
+  .rem-control input {
+    font-family: "Consolas", "Monaco", monospace;
+    font-size: 1rem;
+    display: block;
+    width: 4rem;
+    margin: .5rem auto;
+    padding: .25rem;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <header>
+      <h1 class="title">Checkables
+        <span class="subtitle">Featuring beautiful*, responisve <code>rem</code> sizing.</span>
+      </h1>
+      <div class="rem-control">
+        <label>Choose the <code>rem</code> size</label>
+        <input type="number" value="16" id="remSize">
+      </div>
+    </header>
+    
+    <section>
+      <h2>Inline-block checkboxes</h2>
+      <label class="checkable">
+        <input type="checkbox">
+        <span class="indicator"></span>
+        Here's an inline-block checkbox label.
+      </label>
+
+      <label class="checkable">
+        <input type="checkbox">
+        <span class="indicator"></span>
+        Here's an inline-block checkbox label.
+      </label>
+
+      <label class="checkable">
+        <input type="checkbox">
+        <span class="indicator"></span>
+        Here's an inline-block checkbox label.
+      </label>
+    </section>
+
+    <section>
+      <h2>Inline-block radios</h2>
+      <label class="checkable">
+        <input type="radio" name="ilb-radio">
+        <span class="indicator"></span>
+        Here's an inline-block radio label.
+      </label>
+
+      <label class="checkable">
+        <input type="radio" name="ilb-radio">
+        <span class="indicator"></span>
+        Here's an inline-block radio label.
+      </label>
+
+      <label class="checkable">
+        <input type="radio" name="ilb-radio">
+        <span class="indicator"></span>
+        Here's an inline-block radio label.
+      </label>
+    </section>
+
+    <section>
+      <h2>Block checkboxes</h2>
+      <label class="checkable block">
+        <input type="checkbox">
+        <span class="indicator"></span>
+        Here's a block checkbox label.
+      </label>
+
+      <label class="checkable block">
+        <input type="checkbox">
+        <span class="indicator"></span>
+        Here's a block checkbox label.
+      </label>
+
+      <label class="checkable block">
+        <input type="checkbox">
+        <span class="indicator"></span>
+        Here's a block checkbox label.
+      </label>
+    </section>
+
+    <section>
+      <h2>Block radios</h2>
+      <label class="checkable block">
+        <input type="radio" name="block-radio">
+        <span class="indicator"></span>
+        Here's a block radio label.
+      </label>
+
+      <label class="checkable block">
+        <input type="radio" name="block-radio">
+        <span class="indicator"></span>
+        Here's a block radio label.
+      </label>
+
+      <label class="checkable block">
+        <input type="radio" name="block-radio">
+        <span class="indicator"></span>
+        Here's a block radio label.
+      </label>
+    </section>
+
+    <p class="disclaimer">
+      <small>
+        * Beautiful in font size multiples of 4, that is
+      </small>
+    </p>
+
+  </div>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+
+    $( document ).ready( function() {
+      var $html = $( "html" );
+      $( "#remSize" ).change( function() {
+        $html.css( "font-size", $( this ).val() );
+      });
+    });
+
+  </script>
+</body>
+</html>
