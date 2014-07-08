@@ -12,6 +12,8 @@
     "checkbox",
     "radio"
   ],
+  "repository": "https://github.com/nickb1080/checkables",
+  "homepage": "https://nickb1080.github.io/checkables",
   "license": "MIT",
   "ignore": [
     "**/.*",
