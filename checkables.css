@@ -5,9 +5,14 @@ label.checkable {
   margin: 0.25rem; }
   label.checkable.block {
     display: block; }
-  label.checkable [type='checkbox'],
-  label.checkable [type='radio'] {
-    display: none; }
+  label.checkable input[type='checkbox'],
+  label.checkable input[type='radio'] {
+    position: absolute;
+    left: -9999px; }
+  label.checkable input[type='checkbox']:focus ~ .indicator,
+  label.checkable input[type='radio']:focus ~ .indicator {
+    border-color: white;
+    box-shadow: 0 0 0 4px #16a085; }
   label.checkable .indicator {
     display: inline-block;
     position: relative;
@@ -17,7 +22,11 @@ label.checkable {
     height: 1rem;
     border-radius: 3px;
     background: #dddddd;
-    transition: 0.15s ease-in-out background-color; }
+    box-sizing: content-box;
+    border: 1px solid transparent;
+    box-shadow: none;
+    transition: 0.15s ease-in-out;
+    transition-property: box-shadow, background; }
   label.checkable [type='radio'] ~ .indicator {
     border-radius: 50%; }
   label.checkable input:checked ~ .indicator {

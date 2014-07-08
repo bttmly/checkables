@@ -10,9 +10,14 @@ label.checkable
   margin: .25rem
   &.block
     display: block
-  [type='checkbox'], 
-  [type='radio']
-    display: none
+  input[type='checkbox'], 
+  input[type='radio']
+    position: absolute
+    left: -9999px
+  input[type='checkbox']:focus ~ .indicator, 
+  input[type='radio']:focus ~ .indicator
+    border-color: $checked-inner
+    box-shadow: 0 0 0 4px $checked-color
   .indicator
     display: inline-block
     position: relative
@@ -22,7 +27,11 @@ label.checkable
     height: 1rem
     border-radius: 3px
     background: #ddd
-    transition: $transition-duration ease-in-out background-color
+    box-sizing: content-box
+    border: 1px solid transparent
+    box-shadow: none
+    transition: $transition-duration ease-in-out
+    transition-property: box-shadow, background
   [type='radio'] ~ .indicator
     border-radius: 50%
   input:checked ~ .indicator

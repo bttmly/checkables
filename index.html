@@ -33,7 +33,6 @@
 
   header {
     text-align: center;
-    margin-bottom: 4rem;
   }
 
   .subtitle {
@@ -61,6 +60,16 @@
     margin-bottom: 2rem;
   }
 
+  .rem-size + .arrows {
+    opacity: 0;
+    margin: 0;
+    transition: .2s ease-in-out opacity;
+  }
+
+  .rem-size:focus + .arrows {
+    opacity: 1;
+  }
+
   </style>
 
 </head>
@@ -72,8 +81,9 @@
         <span class="subtitle">Featuring beautiful*, responisve <code>rem</code> sizing.</span>
       </h1>
       <div class="rem-control">
-        <label>Choose the <code>rem</code> size</label>
-        <input type="number" value="16" id="remSize">
+        <label for="remSize">Choose the <code>rem</code> size</label>
+        <input type="number" value="16" id="remSize" class="rem-size">
+        <p class="arrows">&uarr; and &darr; work</p>
       </div>
     </header>
     
