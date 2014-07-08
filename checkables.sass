@@ -1,6 +1,7 @@
 $unchecked-color: #ddd
 $checked-color: #16a085
 $checked-inner: #fff
+$transition-duration: .15s
 
 label.checkable
   line-height: 1.5
@@ -21,7 +22,7 @@ label.checkable
     height: 1rem
     border-radius: 3px
     background: #ddd
-    transition: .15s ease-in-out background-color
+    transition: $transition-duration ease-in-out background-color
   [type='radio'] ~ .indicator
     border-radius: 50%
   input:checked ~ .indicator
@@ -30,7 +31,7 @@ label.checkable
     content: ""
     box-sizing: border-box
     position: absolute
-    transition: .15s ease-in-out
+    transition: $transition-duration ease-in-out
     border-color: transparent
     transition-property: border-color, background-color
 

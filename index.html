@@ -1,8 +1,11 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Checkables</title>
+  <meta charset="utf8">
   <link rel="stylesheet" href="./checkables.css">
   <style>
+
   *, *:before, *:after {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -54,7 +57,12 @@
     padding: .25rem;
   }
 
+  section {
+    margin-bottom: 2rem;
+  }
+
   </style>
+
 </head>
 <body>
   <div class="wrapper">
@@ -160,13 +168,14 @@
     </p>
 
   </div>
+
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script>
 
     $( document ).ready( function() {
       var $html = $( "html" );
       $( "#remSize" ).change( function() {
-        $html.css( "font-size", $( this ).val() );
+        $html.css( "font-size", $( this ).val() + "px" );
       });
     });
 
